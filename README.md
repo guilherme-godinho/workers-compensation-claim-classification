@@ -30,9 +30,9 @@ The WCB receives thousands of workplace injury claims and must decide what type 
 - **Ensemble:** Weighted probability combination of all 5 models with Optuna-tuned weights across 3 Stratified K-Folds — Random Forest received weight 0 in all folds; XGBoost was consistently the dominant model
 - **Explainability:** LIME for per-class feature contribution analysis
 
-### 3. Open-Ended Extensions
+### 3. Open-Ended Extensions — [`03_agreement_reached_prediction.ipynb`](./03_agreement_reached_prediction.ipynb)
 
-- **Agreement Reached prediction:** separate model to predict this feature for the test set (F1 macro 0.71), used as a predictor in the main model — yielding a 1–1.5% improvement in F1 macro
+- **Agreement Reached prediction:** separate model to predict this feature for the test set (F1 macro 0.71), which was then used as a predictor in the main model — yielding a 1–1.5% improvement in F1 macro
 - **Web app:** interactive tool where a WCB employee can input claim features and get a real-time Claim Injury Type prediction from a pre-trained, Optuna-tuned XGBoost model *(not included — dataset was private and provided solely for the course competition)*
 
 ---
@@ -59,6 +59,7 @@ The WCB receives thousands of workplace injury claims and must decide what type 
 ```
 ├── 01_data_exploration_preprocessing.ipynb   # Data exploration and preprocessing
 ├── 02_modelling_ensemble.ipynb               # Feature selection, modelling, ensemble
+├── 03_agreement_reached_prediction.ipynb     # Open-ended extension: Agreement Reached model
 ├── requirements.txt
 ├── .gitignore
 └── README.md
@@ -78,6 +79,7 @@ Run the notebooks in order:
 
 1. `01_data_exploration_preprocessing.ipynb`
 2. `02_modelling_ensemble.ipynb`
+3. `03_agreement_reached_prediction.ipynb`
 
 ---
 
